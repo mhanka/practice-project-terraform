@@ -119,7 +119,7 @@ resource "aws_instance" "web-server-instance" {
     network_interface_id = aws_network_interface.web-server-interface.id
   }
   user_data = <<-EOF
-              #!/bin/bas
+              #!/bin/bash
               sudo apt update -y
               sudo apt install apache2 -y
               sudo systemctl start apache2
